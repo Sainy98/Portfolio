@@ -62,7 +62,9 @@ const NoteWeb = () => {
                 <ul className='ul'>
                     {notes.map((note, index) => (
                         <li key={index} className='ListItem' >
-                            <span>{note}</span>
+
+                            <h3>{(note.charAt(0).toUpperCase() + note.slice(1)).substring(0, 10) + "..."}</h3>
+                            <p>{note.substring(0, 90)}</p>
                             <br />
 
                             <div className='btn-container'>
